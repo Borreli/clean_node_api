@@ -4,7 +4,8 @@
   "description": "Desenvolvimento do projeto do curso \"NodeJs, Typescript, TDD, Clean Architecture e SOLID\" do Rodrigo Manguinho.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:staged": "jest"
   },
   "author": "Felipe Borreli",
   "license": "ISC",
