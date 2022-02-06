@@ -1,0 +1,11 @@
+{
+  "name": "clean_node_api",
+  "version": "1.0.0",
+  "description": "Desenvolvimento do projeto do curso \"NodeJs, Typescript, TDD, Clean Architecture e SOLID\" do Rodrigo Manguinho.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Borreli",
+  "license": "ISC"
+}
