@@ -4,6 +4,17 @@
     "module": "commonjs",
     "target": "ES2019",
     "esModuleInterop": true,
-    "allowJs": true
-  }
+    "allowJs": true,
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": { // @ = baseUrl
+      "@/*": ["*"]
+    },
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/main/test/cypress"
+  ]
 }
