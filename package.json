@@ -4,7 +4,7 @@
   "description": "Desenvolvimento do projeto do curso \"NodeJs, Typescript, TDD, Clean Architecture e SOLID\" do Rodrigo Manguinho.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --no-cache",
     "test:staged": "npm test",
     "test:watch": "npm test -- --watch"
   },
