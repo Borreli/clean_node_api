@@ -6,7 +6,7 @@ import {
   EmailValidator,
   HttpResponse,
   HttpRequest
-} from '@/presentation/protocols'
+} from '@/presentation/controllers/signup/signup-protocols'
 
 export class SignupController implements Controller {
   constructor (
