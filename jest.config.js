@@ -1,10 +1,10 @@
 module.exports = {
-  preset: 'ts-jest',
-  globals: {
-    'ts-jest': {
-      isolatedModules: true
-    }
-  },
+  preset: '@shelf/jest-mongodb',
+  // globals: {
+  //   'ts-jest': {
+  //     isolatedModules: true
+  //   }
+  // },
   roots: ['<rootDir>/src'],
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
