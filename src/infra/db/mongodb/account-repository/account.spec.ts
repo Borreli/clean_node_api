@@ -1,4 +1,4 @@
-import { AccountMongoRepository } from '@/infra/db/mongodb/account-repository/account'
+import { AccountMongoRepository } from '@/infra/db/mongodb'
 import { MongoHelper } from '@/infra/db/mongodb/helpers'
 
 const makeSut = (): AccountMongoRepository => {
