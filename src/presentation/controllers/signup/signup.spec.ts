@@ -1,12 +1,12 @@
 import { AccountModel } from '@/domain/models'
 import { AddAccount, AddAccountModel } from '@/domain/usecases'
-import { EmailValidator } from '@/presentation/controllers/signup/protocols'
+import { EmailValidator, HttpRequest } from '@/presentation/protocols'
 import { SignupController } from '@/presentation/controllers/signup/signup'
 import {
   InvalidParamError,
   MissingParamError
 } from '@/presentation/errors'
-import { HttpRequest } from '@/presentation/protocols'
+
 import { ok, serverError, badRequest } from '@/presentation/helpers/http-helper'
 
 const makeFakeRequest = (): HttpRequest => ({
