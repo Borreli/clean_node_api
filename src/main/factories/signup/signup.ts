@@ -4,7 +4,7 @@ import { AccountMongoRepository, LogMongoRepository } from '@/infra/db/mongodb'
 import { LogControllerDecorator } from '@/main/decorators'
 import { SignupController } from '@/presentation/controllers/signup/signup'
 import { Controller } from '@/presentation/protocols'
-import { makeSignupValidation } from '@/main/factories/signup-validation'
+import { makeSignupValidation } from '@/main/factories/signup/signup-validation'
 
 export const makeSignupController = (): Controller => {
   const salt = 12
