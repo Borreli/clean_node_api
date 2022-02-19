@@ -3,7 +3,7 @@ import { AddAccount, AddAccountModel } from '@/domain/usecases'
 import { HttpRequest } from '@/presentation/protocols'
 import { SignupController } from '@/presentation/controllers/signup/signup'
 import { MissingParamError } from '@/presentation/errors'
-import { ok, serverError, badRequest } from '@/presentation/helpers/http-helper'
+import { ok, serverError, badRequest } from '@/presentation/helpers/http'
 import { Validation } from '@/presentation/helpers/validators'
 
 interface SutTypes {

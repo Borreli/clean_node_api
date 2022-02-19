@@ -4,7 +4,7 @@ import {
   HttpResponse,
   HttpRequest
 } from '@/presentation/protocols'
-import { badRequest, ok, serverError } from '@/presentation/helpers/http-helper'
+import { badRequest, ok, serverError } from '@/presentation/helpers/http'
 import { Validation } from '@/presentation/helpers/validators'
 
 export class SignupController implements Controller {

@@ -1,5 +1,5 @@
 import { Controller, HttpRequest, HttpResponse } from '@/presentation/protocols'
-import { badRequest, serverError, unauthorized, ok } from '@/presentation/helpers/http-helper'
+import { badRequest, serverError, unauthorized, ok } from '@/presentation/helpers/http'
 import { Authentication } from '@/domain/usecases'
 import { Validation } from '@/presentation/helpers/validators'
 

@@ -1,6 +1,6 @@
 import { LogControllerDecorator } from '@/main/decorators'
 import { Controller, HttpRequest, HttpResponse } from '@/presentation/protocols'
-import { serverError, ok } from '@/presentation/helpers/http-helper'
+import { serverError, ok } from '@/presentation/helpers/http'
 import { LogErrorRepository } from '@/data/protocols'
 import { AccountModel } from '@/domain/models'
 
