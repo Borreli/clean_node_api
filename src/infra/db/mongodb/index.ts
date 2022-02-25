@@ -1,2 +1,2 @@
-export * from './account-repository/account'
-export * from './log-repository/log'
+export * from './account/account-mongo-repository'
+export * from './log/log-mongo-repository'

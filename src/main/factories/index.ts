@@ -1,3 +1,3 @@
-export * from './signup/signup'
-export * from './signup/signup-validation'
-export * from './login/login-validation'
+export * from './signup/signup-factory'
+export * from './signup/signup-validation-factory'
+export * from './login/login-validation-factory'

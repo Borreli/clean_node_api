@@ -2,9 +2,9 @@ import { DbAddAccount } from '@/data/usecases'
 import { BcryptAdapter } from '@/infra/cryptography'
 import { AccountMongoRepository, LogMongoRepository } from '@/infra/db/mongodb'
 import { LogControllerDecorator } from '@/main/decorators'
-import { SignupController } from '@/presentation/controllers/signup/signup'
+import { SignupController } from '@/presentation/controllers'
 import { Controller } from '@/presentation/protocols'
-import { makeSignupValidation } from '@/main/factories/signup/signup-validation'
+import { makeSignupValidation } from '@/main/factories'
 
 export const makeSignupController = (): Controller => {
   const salt = 12
