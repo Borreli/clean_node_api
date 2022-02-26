@@ -4,7 +4,9 @@
   "description": "Desenvolvimento do projeto do curso \"NodeJs, Typescript, TDD, Clean Architecture e SOLID\" do Rodrigo Manguinho.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev -r tsconfig-paths/register src/main/server.ts",
+    "start": "node dist/main/server.js",
+    "build": "rimraf dist && ttsc -P ./tsconfig.json",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/main/server.ts",
     "test": "jest --passWithNoTests --no-cache --silent --runInBand",
     "test:verbose": "jest --passWithNoTests --no-cache",
     "test:staged": "npm test -- --findRelatedTests",
@@ -25,6 +27,7 @@
     "@types/supertest": "^2.0.8",
     "@types/validator": "^12.0.1",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "eslint": "^6.8.0",
     "eslint-config-standard-with-typescript": "^11.0.1",
     "eslint-plugin-import": "^2.25.4",
@@ -35,16 +38,17 @@
     "husky": "^4.0.6",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
+    "rimraf": "^3.0.2",
     "supertest": "^4.0.2",
     "ts-jest": "^24.3.0",
     "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^3.9.0",
+    "ttypescript": "^1.5.13",
     "typescript": "^3.7.4"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
-    "fast-glob": "^3.1.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.1",
     "validator": "^12.1.0"

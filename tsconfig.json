@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "dist",
     "module": "commonjs",
     "target": "ES2019",
     "esModuleInterop": true,
@@ -10,11 +10,17 @@
     "paths": { // @ = baseUrl
       "@/*": ["*"]
     },
+    "plugins": [
+      {
+          "transform": "@zerollup/ts-transform-paths",
+      }
+    ]
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "src/main/test/cypress"
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
