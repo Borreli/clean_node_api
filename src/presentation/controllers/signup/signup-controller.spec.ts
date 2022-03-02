@@ -1,10 +1,9 @@
 import { AccountModel } from '@/domain/models'
 import { AddAccount, AddAccountModel, Authentication, AuthenticationModel } from '@/domain/usecases'
-import { HttpRequest } from '@/presentation/protocols'
+import { HttpRequest, Validation } from '@/presentation/protocols'
 import { SignupController } from '@/presentation/controllers/signup/signup-controller'
 import { MissingParamError, EmailInUseError } from '@/presentation/errors'
 import { ok, serverError, badRequest, forbidden } from '@/presentation/helpers/http'
-import { Validation } from '@/presentation/helpers/validators'
 
 interface SutTypes {
   sut: SignupController

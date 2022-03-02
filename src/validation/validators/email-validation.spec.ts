@@ -1,5 +1,5 @@
-import { EmailValidator } from '@/presentation/protocols'
-import { EmailValidation } from '@/presentation/helpers/validators'
+import { EmailValidator } from '@/validation/protocols'
+import { EmailValidation } from '@/validation/validators'
 import { InvalidParamError } from '@/presentation/errors'
 
 interface SutTypes {
