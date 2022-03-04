@@ -3,6 +3,7 @@ import { AccessDeniedError } from '@/presentation/errors'
 import { AuthMiddleware } from '@/presentation/middlewares'
 import { LoadAccountByToken } from '@/domain/usecases'
 import { AccountModel } from '@/domain/models'
+import { HttpRequest } from '@/presentation/protocols'
 
 interface SutTypes {
   sut: AuthMiddleware
@@ -30,6 +31,12 @@ const makeFakeAccount = (): AccountModel => ({
   password: 'hashed_password'
 })
 
+const makeFakeRequest = (): HttpRequest => ({
+  headers: {
+    'x-access-token': 'any_token'
+  }
+})
+
 describe('AuthMiddleware', () => {
   test('Should return 403 if no x-access-token exists in headers', async () => {
     const { sut } = makeSut()
@@ -40,11 +47,7 @@ describe('AuthMiddleware', () => {
   test('Should call LoadAccountByToken with correct accessToken', async () => {
     const { sut, loadAccountByTokenStub } = makeSut()
     const loadSpy = jest.spyOn(loadAccountByTokenStub, 'load')
-    await sut.handle({
-      headers: {
-        'x-access-token': 'any_token'
-      }
-    })
+    await sut.handle(makeFakeRequest())
     expect(loadSpy).toHaveBeenCalledWith('any_token')
   })
 })
