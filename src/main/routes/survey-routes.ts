@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { adaptRoute } from '@/main/adapters'
-import { makeAddSurveyController } from '@/main/factories'
+import { makeAddSurveyController } from '@/main/factories/controllers'
 import { Router } from 'express'
 
 export default (router: Router): void => {
