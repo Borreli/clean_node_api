@@ -1,3 +1,6 @@
+[![Build Status](https://app.travis-ci.com/Borreli/clean_node_api.svg?branch=master)](https://app.travis-ci.com/Borreli/clean_node_api)
+[![Coverage Status](https://coveralls.io/repos/github/Borreli/clean_node_api/badge.svg?branch=master)](https://coveralls.io/github/Borreli/clean_node_api?branch=master)
+
 # **Clean Node API**
 
 Essa API faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
