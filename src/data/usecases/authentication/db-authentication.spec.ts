@@ -4,7 +4,7 @@ import { LoadAccountByEmailRepository, UpdateAccessTokenRepository } from '@/dat
 import { DbAuthentication } from '@/data/usecases'
 import { AuthenticationModel } from '@/domain/usecases'
 
-interface SutTypes {
+type SutTypes = {
   sut: DbAuthentication
   loadAccountByEmailRepositoryStub: LoadAccountByEmailRepository
   hashComparerStub: HashComparer

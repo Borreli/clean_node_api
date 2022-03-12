@@ -5,7 +5,7 @@ import { LoadAccountByToken } from '@/domain/usecases'
 import { AccountModel } from '@/domain/models'
 import { HttpRequest } from '@/presentation/protocols'
 
-interface SutTypes {
+type SutTypes = {
   sut: AuthMiddleware
   loadAccountByTokenStub: LoadAccountByToken
 }
