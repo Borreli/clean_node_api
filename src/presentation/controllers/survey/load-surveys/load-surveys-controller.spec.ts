@@ -4,7 +4,7 @@ import { LoadSurveys } from '@/domain/usecases'
 import { ok, serverError, noContent } from '@/presentation/helpers/http'
 import MockDate from 'mockdate'
 
-interface SutTypes {
+type SutTypes = {
   sut: LoadSurveysController
   loadSurveysStub: LoadSurveys
 }

@@ -4,7 +4,7 @@ import { DbAddAccount } from '@/data/usecases'
 import { AccountModel } from '@/domain/models'
 import { AddAccountModel } from '@/domain/usecases'
 
-interface SutTypes {
+type SutTypes = {
   sut: DbAddAccount
   hasherStub: Hasher
   addAccountRepositoryStub: AddAccountRepository

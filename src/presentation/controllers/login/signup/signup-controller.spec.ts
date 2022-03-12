@@ -5,7 +5,7 @@ import { SignupController } from '@/presentation/controllers/login/signup/signup
 import { MissingParamError, EmailInUseError } from '@/presentation/errors'
 import { ok, serverError, badRequest, forbidden } from '@/presentation/helpers/http'
 
-interface SutTypes {
+type SutTypes = {
   sut: SignupController
   addAccountStub: AddAccount
   validationStub: Validation
