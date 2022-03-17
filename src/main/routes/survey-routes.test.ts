@@ -4,6 +4,7 @@ import { MongoHelper } from '@/infra/db/mongodb/helpers'
 import { Collection } from 'mongodb'
 import { sign } from 'jsonwebtoken'
 import env from '@/main/config/env'
+import { mockAddSurveyParams } from '@/domain/test'
 
 let surveyCollection: Collection
 let accountCollection: Collection
@@ -90,14 +91,7 @@ describe('Survey Routes', () => {
 
     test('Should return 200 on load surveys with valid accessToken', async () => {
       const accessToken = await makeAccessToken()
-      await surveyCollection.insertMany([{
-        question: 'any_question',
-        answers: [{
-          image: 'any_image',
-          answer: 'any_answer'
-        }],
-        date: new Date()
-      }])
+      await surveyCollection.insertOne(mockAddSurveyParams())
       await request(app)
         .get('/api/surveys')
         .set('x-access-token', accessToken)

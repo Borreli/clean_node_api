@@ -1,6 +1,8 @@
 import { EmailValidator } from '@/validation/protocols'
 import { EmailValidation } from '@/validation/validators'
 import { InvalidParamError } from '@/presentation/errors'
+import { mockEmailValidator } from '@/validation/test'
+import { throwError } from '@/domain/test'
 
 type SutTypes = {
   sut: EmailValidation
@@ -8,7 +10,7 @@ type SutTypes = {
 }
 
 const makeSut = (): SutTypes => {
-  const emailValidatorStub = makeEmailValidator()
+  const emailValidatorStub = mockEmailValidator()
   const sut = new EmailValidation(
     'email',
     emailValidatorStub
@@ -17,15 +19,6 @@ const makeSut = (): SutTypes => {
     sut,
     emailValidatorStub
   }
-}
-
-const makeEmailValidator = (): EmailValidator => {
-  class EmailValidatorStub implements EmailValidator {
-    isValid (email: string): boolean {
-      return true
-    }
-  }
-  return new EmailValidatorStub()
 }
 
 describe('EmailValidation', () => {
@@ -45,9 +38,7 @@ describe('EmailValidation', () => {
 
   test('Should throw if EmailValidator throws', () => {
     const { sut, emailValidatorStub } = makeSut()
-    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
-      throw new Error()
-    })
+    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(throwError)
     expect(sut.validate).toThrow()
   })
 })
