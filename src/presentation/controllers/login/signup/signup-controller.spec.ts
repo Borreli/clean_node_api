@@ -1,5 +1,5 @@
 import { AccountModel } from '@/domain/models'
-import { AddAccount, AddAccountModel, Authentication, AuthenticationModel } from '@/domain/usecases'
+import { AddAccount, AddAccountParams, Authentication, AuthenticationParams } from '@/domain/usecases'
 import { HttpRequest, Validation } from '@/presentation/protocols'
 import { SignupController } from '@/presentation/controllers/login/signup/signup-controller'
 import { MissingParamError, EmailInUseError } from '@/presentation/errors'
@@ -47,7 +47,7 @@ const makeFakeAccount = (): AccountModel => ({
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
-    async add (account: AddAccountModel): Promise<AccountModel> {
+    async add (account: AddAccountParams): Promise<AccountModel> {
       return new Promise(resolve => resolve(makeFakeAccount()))
     }
   }
@@ -65,7 +65,7 @@ const makeValidation = (): Validation => {
 
 const makeAuthentication = (): Authentication => {
   class AuthenticationStub implements Authentication {
-    async auth (authentication: AuthenticationModel): Promise<string> {
+    async auth (authentication: AuthenticationParams): Promise<string> {
       return new Promise(resolve => resolve('any_token'))
     }
   }

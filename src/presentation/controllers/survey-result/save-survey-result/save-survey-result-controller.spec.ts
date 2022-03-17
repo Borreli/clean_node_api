@@ -1,6 +1,6 @@
 import { SaveSurveyResultController } from '@/presentation/controllers/survey-result'
 import { HttpRequest } from '@/presentation/protocols'
-import { LoadSurveyById, SaveSurveyResult, SaveSurveyResultModel } from '@/domain/usecases'
+import { LoadSurveyById, SaveSurveyResult, SaveSurveyResultParams } from '@/domain/usecases'
 import { SurveyModel, SurveyResultModel } from '@/domain/models'
 import { forbidden, serverError, ok } from '@/presentation/helpers/http'
 import { InvalidParamError } from '@/presentation/errors'
@@ -37,7 +37,7 @@ const makeLoadSurveyById = (): LoadSurveyById => {
 
 const makeSaveSurveyResult = (): SaveSurveyResult => {
   class SaveSurveyResultStub implements SaveSurveyResult {
-    async save (data: SaveSurveyResultModel): Promise<SurveyResultModel> {
+    async save (data: SaveSurveyResultParams): Promise<SurveyResultModel> {
       return new Promise(resolve => resolve(makeFakeSurveyResult()))
     }
   }

@@ -2,7 +2,7 @@ import { AccountModel } from '@/domain/models'
 import { HashComparer, Encrypter } from '@/data/protocols/cryptography'
 import { LoadAccountByEmailRepository, UpdateAccessTokenRepository } from '@/data/protocols/db'
 import { DbAuthentication } from '@/data/usecases'
-import { AuthenticationModel } from '@/domain/usecases'
+import { AuthenticationParams } from '@/domain/usecases'
 
 type SutTypes = {
   sut: DbAuthentication
@@ -75,7 +75,7 @@ const makeFakeAccount = (): AccountModel => ({
   password: 'hashed_password'
 })
 
-const makeFakeAuthentication = (): AuthenticationModel => ({
+const makeFakeAuthentication = (): AuthenticationParams => ({
   email: 'any_email@mail.com',
   password: 'any_password'
 })
