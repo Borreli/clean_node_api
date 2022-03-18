@@ -1,6 +1,6 @@
 {
   "name": "clean_node_api",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Desenvolvimento do projeto do curso \"NodeJs, Typescript, TDD, Clean Architecture e SOLID\" do Rodrigo Manguinho.",
   "main": "index.js",
   "scripts": {
