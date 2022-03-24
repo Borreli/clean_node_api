@@ -17,3 +17,5 @@
 1. ✅ Retorna erro **500** se der erro ao tentar criar o resultado da enquete
 1. ✅ Retorna erro **500** se der erro ao tentar atualizar o resultado da enquete
 1. ✅ Retorna erro **500** se der erro ao tentar carregar a enquete
+
+[Readme](../readme.md)
