@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && ttsc -P ./tsconfig.tsc.json",
-    "build:watch": "ttsc -P ./tsconfig.tsc.json -w",
+    "build:watch": "rimraf dist && ttsc -P ./tsconfig.tsc.json -w",
     "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/main/server.js",
     "dev": "ts-node-dev -r tsconfig-paths/register src/main/server.ts",
     "up": "npm run build && docker-compose up -d",
