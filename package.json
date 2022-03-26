@@ -15,7 +15,7 @@
     "down": "docker-compose down",
     "test": "jest --passWithNoTests --no-cache --silent --runInBand",
     "test:watch": "npm test -- --watch -c jest-unit-config.js",
-    "test:verbose": "jest --passWithNoTests --no-cache",
+    "test:verbose": "jest --passWithNoTests --no-cache --runInBand",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info",
