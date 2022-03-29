@@ -1,10 +1,13 @@
 import { Controller, HttpRequest, HttpResponse } from '@/presentation/protocols'
-import { LoadSurveyById } from '@/domain/usecases'
+import { LoadSurveyById, LoadSurveyResult } from '@/domain/usecases'
 import { forbidden, serverError } from '@/presentation/helpers/http'
 import { InvalidParamError } from '@/presentation/errors'
 
 export class LoadSurveyResultController implements Controller {
-  constructor (private readonly loadSurveyById: LoadSurveyById) {}
+  constructor (
+    private readonly loadSurveyById: LoadSurveyById,
+    private readonly loadSurveyResult: LoadSurveyResult
+  ) {}
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
@@ -13,6 +16,7 @@ export class LoadSurveyResultController implements Controller {
       if (!survey) {
         return forbidden(new InvalidParamError('surveyId'))
       }
+      await this.loadSurveyResult.load(surveyId)
       return null
     } catch (error) {
       return serverError(error)
