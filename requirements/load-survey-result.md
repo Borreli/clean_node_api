@@ -7,7 +7,7 @@
 
 > ## Exceções:
 1. ⛔️ Retorna erro **404** se a API não existir
-1. ⛔️ Retorna erro **403** se não for um usuário
+1. ⛔️ Retorna erro **403** se não for uma enquete
 1. ⛔️ Retorna erro **500** se der erro ao tentar listar o resultado da enquete
 
 [Readme](../readme.md)
