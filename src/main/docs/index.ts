@@ -26,7 +26,7 @@ export default {
   info: {
     title: 'Clean Node API',
     description: 'API do curso do Mango para realizar enquetes entre programadores',
-    version: '0.7.0'
+    version: '0.7.1'
   },
   license: {
     name: 'GPL-3.0-or-later',
